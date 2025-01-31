@@ -43,7 +43,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              {Array.from("Siva Naga Sai Ganesh").map(
+              {Array.from("Siva Naga Sai Ganesh Neelakantam").map(
                 (letter, index) => (
                   <motion.span
                     key={index}
