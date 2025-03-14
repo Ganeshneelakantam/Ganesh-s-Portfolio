@@ -15,7 +15,7 @@ const projects: Project[] = [
    {
     title: 'NVR Travels',
     description: 'A travel booking system with location autocomplete, fare calculation, and SMS notifications.',
-    image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80', // Travel-related placeholder
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpI02Ap8-13QCN3RQBK4v683hYewl9Xttx-Q&s', // Travel-related placeholder
     github: 'https://github.com/Ganeshneelakantam/NVR_Travels', 
     // demo: 'https://nvr-travels.netlify.app', 
     techStack: ['React', 'TypeScript', 'Node.js', 'Express', 'Twilio', 'Tailwind CSS'],
