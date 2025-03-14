@@ -50,12 +50,14 @@ const About = () => {
           
           <div className="mb-12 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
             <p className="mb-4">
-              Driven professional with expertise in AI, full-stack development, and data analytics, 
-              passionate about crafting innovative and scalable solutions.
+              I’m a dedicated Computer Science graduate with a deep passion for full-stack development, 
+              machine learning, and data analytics. I love crafting scalable, user-centric solutions that 
+              tackle real-world challenges and make a difference.
             </p>
             <p>
-              I specialize in building robust applications that solve real-world problems, 
-              with a focus on user experience and performance optimization.
+              Through diverse virtual internships and active contributions to open-source projects on GitHub, 
+              I’ve honed my skills while exploring cutting-edge technologies. My journey is driven by a desire 
+              to harness AI and modern development practices to build innovative, impactful software.
             </p>
           </div>
 
@@ -64,19 +66,24 @@ const About = () => {
             
             <div className="mt-8">
               <TimelineItem
+                year="June 2024 - Present"
+                title="Java Full Stack Internship (KodNest)"
+                description="Trained in Java, Python, SQL, and frameworks like Spring Boot and Django. Gained experience in testing with Selenium and project management with Jira."
+              />
+              <TimelineItem
                 year="2020 - 2024"
-                title="Bachelor's in Computer Science"
-                description="Studied advanced computing concepts, algorithms, and software engineering principles."
+                title="B.Tech in Computer Science and Engineering"
+                description="Usha Rama College of Engineering and Technology, Telaprolu. Graduated with a CGPA of 8.31 (75.63%), mastering algorithms, software engineering, and emerging technologies."
               />
               <TimelineItem
-                year="2023"
-                title="Software Development Intern"
-                description="Developed and maintained full-stack applications using modern technologies."
+                year="Nov 2023 - Apr 2024"
+                title="Data Science Virtual Internship (APSCHE & 360DigiTMG)"
+                description="Performed exploratory data analysis, built regression models, and visualized insights using Python and SQL."
               />
               <TimelineItem
-                year="2022"
-                title="AI Research Assistant"
-                description="Conducted research on machine learning algorithms and implemented solutions."
+                year="Mar 2022 - May 2022"
+                title="AI-ML Virtual Internship (AICTE & AWS Academy)"
+                description="Applied machine learning techniques such as classification and clustering to solve practical problems."
               />
             </div>
           </div>
