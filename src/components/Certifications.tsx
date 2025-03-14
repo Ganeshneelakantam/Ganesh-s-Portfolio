@@ -1,58 +1,77 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Award } from 'lucide-react';
+import { Award, Star } from 'lucide-react';
 
 interface Certification {
   title: string;
   issuer: string;
   date: string;
   credential?: string;
+  category?: string;
+  highlight?: boolean;
 }
 
 const certifications: Certification[] = [
   {
-    title: 'AI Foundations: Prompt Engineering with ChatGPT',
-    issuer: 'Coursera',
-    date: 'December 2023',
-    credential: 'coursera.org/verify/ABC123',
+    title: 'Introduction to Industry 4.0 and Industrial IoT',
+    issuer: 'NPTEL',
+    date: 'Jul - Oct 2022',
+    credential: 'nptel.ac.in/noc',
+    category: 'Technical Skills',
+    highlight: true,
   },
   {
-    title: 'React.js',
-    issuer: 'Upgrade',
-    date: 'October 2023',
+    title: 'AI Foundations: Prompt Engineering with ChatGPT',
+    issuer: 'Arizona State University (Coursera)',
+    date: 'Dec 2023',
+    credential: 'coursera.org/verify/ABC123',
+    category: 'AI & Machine Learning',
+  },
+  {
+    title: 'React.js Certification',
+    issuer: 'UpGrad',
+    date: 'Oct 2023',
     credential: 'upgrade.com/cert/XYZ789',
+    category: 'Web Development',
   },
   {
     title: 'Google UX Design Specialization',
     issuer: 'Coursera',
-    date: 'August 2023',
+    date: 'Aug 2023',
     credential: 'coursera.org/verify/DEF456',
+    category: 'Design',
   },
   {
-    title: 'SQL (Advanced)',
-    issuer: 'HackerRank',
-    date: 'July 2023',
-    credential: 'hackerrank.com/certificates/GHI789',
-  },
-  {
-    title: 'Data Visualization',
+    title: 'Data Visualization: Empowering Business Insights',
     issuer: 'Tata Forge',
-    date: 'June 2023',
+    date: 'Jun 2023',
     credential: 'tataforge.com/cert/JKL012',
+    category: 'Data Science',
   },
 ];
 
 const CertificationCard = ({ certification }: { certification: Certification }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-      <div className="flex items-start">
-        <Award className="w-8 h-8 text-purple-600 mr-4 flex-shrink-0" />
-        <div>
-          <h3 className="text-lg font-semibold mb-2">{certification.title}</h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-1">{certification.issuer}</p>
-          <p className="text-gray-500 dark:text-gray-400 text-sm">{certification.date}</p>
-          {certification.credential && (
+    <motion.div
+      className="relative bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[180px] flex flex-col"
+      whileHover={{ y: -2 }}
+    >
+      <div className="flex items-start gap-4 flex-grow">
+        <Award className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2 line-clamp-2">
+            {certification.title}
+            {certification.highlight && (
+              <Star className="w-4 h-4 text-yellow-500 fill-current" />
+            )}
+          </h3>
+          <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
+            {certification.issuer}
+          </p>
+          <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">
+            {certification.date}
+          </p>
+          {/* {certification.credential && (
             <a
               href={`https://${certification.credential}`}
               target="_blank"
@@ -61,10 +80,10 @@ const CertificationCard = ({ certification }: { certification: Certification }) 
             >
               View Credential
             </a>
-          )}
+          )} */}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -75,7 +94,7 @@ const Certifications = () => {
   });
 
   return (
-    <section id="certifications" className="py-20 bg-white dark:bg-gray-800">
+    <section id="certifications" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -83,9 +102,11 @@ const Certifications = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Certifications</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            Certifications
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {certifications.map((certification, index) => (
               <motion.div
                 key={certification.title}
