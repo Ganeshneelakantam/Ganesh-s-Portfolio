@@ -17,7 +17,7 @@ const projects: Project[] = [
     description: 'A travel booking system with location autocomplete, fare calculation, and SMS notifications.',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpI02Ap8-13QCN3RQBK4v683hYewl9Xttx-Q&s', // Travel-related placeholder
     github: 'https://github.com/Ganeshneelakantam/NVR_Travels', 
-    // demo: 'https://nvr-travels.netlify.app', 
+    demo: 'https://neelakantam-travels.netlify.app/', 
     techStack: ['React', 'TypeScript', 'Node.js', 'Express', 'Twilio', 'Tailwind CSS'],
   },
   {
